@@ -1,0 +1,11 @@
+[Unit]
+Description=Roscore
+
+[Service]
+User=szymonri
+ExecStart=/bin/bash -c "source /opt/ros/noetic/setup.bash; ROS_HOSTNAME=ros-robot ROS_MASTER_URI=http://ros-robot:11311 roslaunch rplidar_ros rplidar.launch"
+
+[Install]
+WantedBy=multi-user.target
+
+
